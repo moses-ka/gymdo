@@ -13,17 +13,21 @@
     <div  class="posts">
         <div class="formContainer">
              
-           <input id="taskIn" class="taskIn" value="" placeholder=" TASK" type="text" onchange="">  
+           <input id="taskIn"  class="taskIn" value=""  placeholder=" TASK" type="text" onchange="">  
            <button class="button" id="addBtn" onclick="addTask()" >Add</button>
         
         </div>
-        <div class="post1">
+        <div id="1" class="post1">
             <div id="taskContainer" class="taskContainer">
-                <h3 id="text">going to the gym</h3>
+                <h3 onclick="edit(task)" id="text">going to the gym</h3>
             </div>
               <div>
-                <img class="img" width="30px" src="assets/delete.png" alt="">
-                <img class="img" width="30px" src="assets/edit.png" alt=""> 
+                <button name="delete" onclick="deleteTask(event)" >
+                    <img class="img" width="30px" src="assets/delete.png" alt="">
+                </button>
+                <button onclick="edit(task)"">
+                    <img class="img" width="30px" src="assets/edit.png" alt=""> 
+                </button>
               </div>
         </div>
         
