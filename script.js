@@ -1,6 +1,6 @@
 const addTask = () => {
     const task = document.getElementById("taskIn").value
-    let divAdded = `<div class="post1">
+    let taskToAdd = ` <div class="post1">
     <div id="taskContainer" class="taskContainer">
         <h3 id="text">${task}</h3>
     </div>
@@ -11,5 +11,5 @@ const addTask = () => {
           <button class="buttonDelet" id="addBtn" >Delet</button> -->
       </div>
  </div>`
-   
+ 
 }
