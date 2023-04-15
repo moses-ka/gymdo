@@ -5,31 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    
     <title>Gymdo</title>
 </head>
 <body class="body">
    
-    <div id="posts" class="posts">
+    <div  class="posts">
         <div class="formContainer">
              
            <input id="taskIn" class="taskIn" value="" placeholder=" TASK" type="text" onchange="">  
-           <button class="button" id="addBtn" onclick="addTask()" >Add</button>
+           <button class="button" id="addBtn" onsubmit="addTask()" >Add</button>
         
         </div>
-         <div class="post1">
+        <div class="post1">
             <div id="taskContainer" class="taskContainer">
                 <h3 id="text">going to the gym</h3>
             </div>
               <div>
                 <img class="img" width="30px" src="assets/delete.png" alt="">
-                <img class="img" width="30px" src="assets/edit.png" alt="">
-                  <!-- <button class="buttonEdit" id="addBtn" >Edit</button>
-                  <button class="buttonDelet" id="addBtn" >Delet</button> -->
+                <img class="img" width="30px" src="assets/edit.png" alt=""> 
               </div>
-         </div>
+        </div>
         
     </div>
-                
+    <script src="script.js"></script>
 </body>
 </html>
