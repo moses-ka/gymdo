@@ -7,13 +7,15 @@ const addTask = () => {
     const task = document.getElementById("taskIn").value
     const elementToAdd = ` <div class="post1 postNum${postNum} " >
     <div id="taskContainer" class="taskContainer">
-        <h3  id="text postNum${postNum}">${task}</h3>
+        <h3 on click id="text postNum${postNum}">${task}</h3>
     </div>
       <div>
       <button name="delete" onclick="deleteTask(${postNum})" >
       <img class="img" width="30px" src="assets/delete.png" alt="">
   </button>
-        <img class="img" width="30px" src="assets/edit.png" alt=""> 
+  <button onclick="edit(task)">
+  <img class="img" width="30px" src="assets/edit.png" alt=""> 
+</button>
       </div>
 </div>`
 if(task != ""){
@@ -27,8 +29,10 @@ const  deleteTask = (x) => {
  elementToDelete.remove();
 
 }
-const  edit = (task) => {
-  let elementToEdit = task.replace(" ","")
-  elementToEdit.	;
+// to do add input to edit the text of h3 and save it 
+const  edit = () => {
+  let elementToEdit = document.querySelector(`.postNum${postNum}`)
+  elementToEdit.innerHTML = "hello";	
   
-}
+} 
+// to do a button to make as done
