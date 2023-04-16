@@ -1,21 +1,22 @@
 const Con = document.querySelector(".posts");
 
-var postNum = 1
+var postNum = 0
 
 const addTask = () => {
      postNum++;
     const task = document.getElementById("taskIn").value
     const elementToAdd = ` <div class="post1 postNum${postNum} " >
     <div id="taskContainer" class="taskContainer">
-        <h3 on click id="text postNum${postNum}">${task}</h3>
+        <h3 onclick="editTask()" class="textNum${postNum}" id="text">${task}</h3>
     </div>
       <div>
       <button name="delete" onclick="deleteTask(${postNum})" >
       <img class="img" width="30px" src="assets/delete.png" alt="">
-  </button>
-  <button onclick="edit(task)">
-  <img class="img" width="30px" src="assets/edit.png" alt=""> 
-</button>
+      </button>
+      <button>
+            <img onclick="markAsDone()" class="img" width="30px" src="assets/select.png" alt="">
+           </button>
+  
       </div>
 </div>`
 if(task != ""){
@@ -25,14 +26,36 @@ if(task != ""){
 }
 const  deleteTask = (x) => {
   
- let elementToDelete = document.querySelector(`.postNum${x}`)	;
+ let elementToDelete = document.querySelector(`.postNum${postNum}`)	;
  elementToDelete.remove();
 
 }
 // to do add input to edit the text of h3 and save it 
-const  edit = () => {
-  let elementToEdit = document.querySelector(`.postNum${postNum}`)
-  elementToEdit.innerHTML = "hello";	
+
+let editTask = () => {
+  let elementToEdit = document.querySelector(`.textNum${postNum}`)	;
   
-} 
+  let input = document.createElement('input');
+  
+  input.type = 'text';
+  input.classList.add('taskIn');
+  input.value = elementToEdit.innerHTML;
+  input.onchange = '';
+  input.id = 'taskIn';
+  input.name = 'inputToEdit';
+  elementToEdit.innerHTML = '';
+  elementToEdit.appendChild(input);
+  
+  input.focus();
+  input.addEventListener('blur', () => {
+    elementToEdit.innerHTML = input.value;
+    if (input.value === '') {
+      deleteTask(postNum);
+    }
+  });
+}
 // to do a button to make as done
+const markAsDone = () => {
+  let elementToMarkAsDone = document.querySelector(`.textNum${postNum}`)	;
+  elementToMarkAsDone.classList.add('done');
+}

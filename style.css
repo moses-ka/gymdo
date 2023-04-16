@@ -2,10 +2,17 @@
     margin: 0;
     padding: 0;
   }
- 
+ header{
+    display: flex;
+    justify-content :center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 6rem;
+    
+ }
   
 .posts {
-    height: 100vh;
+    height:;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,7 +52,7 @@
     width: 300px;
 } */
 .taskIn{
-    width: 600px;
+    width: 500px;
     height : 50px;
     border: solid #000000 2px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
@@ -100,6 +107,11 @@ h3{
     font-size: 18px;
     color: #000000;
     text-align: center;
+}
+.done{
+   text-decoration: line-through;
+   font-weight: lighter;
+    
 }
 .img{
    margin: 10px;
