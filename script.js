@@ -10,12 +10,12 @@ const addTask = () => {
         <h3 onclick="editTask()" class="textNum${postNum}" id="text">${task}</h3>
     </div>
       <div>
+      <button>
+            <img onclick="markAsDone()" class="img" width="30px" src="assets/verified.png" alt="">
+           </button>
       <button name="delete" onclick="deleteTask(${postNum})" >
       <img class="img" width="30px" src="assets/delete.png" alt="">
       </button>
-      <button>
-            <img onclick="markAsDone()" class="img" width="30px" src="assets/select.png" alt="">
-           </button>
   
       </div>
 </div>`
