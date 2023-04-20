@@ -40,7 +40,7 @@ let editTask = () => {
   input.type = 'text';
   input.classList.add('taskIn');
   input.value = elementToEdit.innerHTML;
-  input.onchange = '';
+  
   input.id = 'taskIn';
   input.name = 'inputToEdit';
   elementToEdit.innerHTML = '';
@@ -59,12 +59,5 @@ const markAsDone = () => {
   let elementToMarkAsDone = document.querySelector(`.textNum${postNum}`)	;
   elementToMarkAsDone.classList.add('done');
 }
-// to do a button that directs to a link 
-
-  // let button = document.querySelector(".button")
-  // button.addEventListener('submit', (e) => {
-  //   e.preventDefault();
-  //   console.log("form submitted");  
-    
-  // })
+//
 
