@@ -49,7 +49,7 @@ let editTask = () => {
   input.focus();
   input.addEventListener('blur', () => {
     elementToEdit.innerHTML = input.value;
-    if (input.value === '') {
+    if (input.value == '') {
       deleteTask(postNum);
     }
   });
@@ -59,3 +59,12 @@ const markAsDone = () => {
   let elementToMarkAsDone = document.querySelector(`.textNum${postNum}`)	;
   elementToMarkAsDone.classList.add('done');
 }
+// to do a button that directs to a link 
+
+  // let button = document.querySelector(".button")
+  // button.addEventListener('submit', (e) => {
+  //   e.preventDefault();
+  //   console.log("form submitted");  
+    
+  // })
+
