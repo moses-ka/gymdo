@@ -60,11 +60,10 @@ let editTask = (x) => {
   let elementToEdit = document.querySelector(`.textNum${x}`)	;
   
   let input = document.createElement('input');
-  
+  let button = document.querySelector('.img');
   input.type = 'text';
   input.classList.add('taskIn');
   input.value = elementToEdit.innerHTML;
-  
   input.id = 'taskIn';
   input.name = 'inputToEdit';
   elementToEdit.innerHTML = '';
@@ -73,15 +72,19 @@ let editTask = (x) => {
   input.focus();
   input.addEventListener('click', () => {
     elementToEdit.innerHTML = input.value;
-    if (input.value == '') {
-      deleteTask(x);
-      input.onblur = () => {
-        input.remove();
-      }
-    
+    if (input.value == '') {deleteTask(x);}
+    })
+    button.addEventListener('click', () => {
+      elementToEdit.innerHTML = input.value;
+      if (input.value == ''){deleteTask( x);}; 
     }
-  });
+    )
+    ;
+
+      
+      
 }
+  
 // to do a button to make as done
 const markAsDone = (x) => {
   let elementToMarkAsDone = document.querySelector(`.textNum${x}`)	;
