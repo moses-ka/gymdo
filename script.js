@@ -13,7 +13,7 @@ const addTask = () => {
     </div>
       <div>
       <button>
-            <img onclick="markAsDone()" class="img" width="30px" src="assets/verified.png" alt="">
+            <img onclick="markAsDone(${postNum})" class="img" width="30px" src="assets/verified.png" alt="">
            </button>
       <button name="delete" onclick="deleteTask(${postNum})" >
       <img class="img" width="30px" src="assets/delete.png" alt="">
@@ -58,7 +58,7 @@ const  deleteTask = (x) => {
 // });
 let editTask = (x) => {
   let elementToEdit = document.querySelector(`.textNum${x}`)	;
-  
+  let anyWhere = document.querySelector('body')	;
   let input = document.createElement('input');
   let button = document.querySelector('.img');
   input.type = 'text';
@@ -74,7 +74,8 @@ let editTask = (x) => {
     elementToEdit.innerHTML = input.value;
     if (input.value == '') {deleteTask(x);}
     })
-    button.addEventListener('click', () => {
+    input.focus();
+    button.addEventListener("dblclick", () => {
       elementToEdit.innerHTML = input.value;
       if (input.value == ''){deleteTask( x);}; 
     }
@@ -86,9 +87,8 @@ let editTask = (x) => {
 }
   
 // to do a button to make as done
+
 const markAsDone = (x) => {
   let elementToMarkAsDone = document.querySelector(`.textNum${x}`)	;
-  elementToMarkAsDone.classList.add('done');
+  elementToMarkAsDone.classList.toggle('done');
 }
-//
-
