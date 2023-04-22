@@ -1,13 +1,15 @@
 const Con = document.querySelector(".posts");
 
-var postNum = 0
+
 
 const addTask = () => {
-     postNum++;
+  let postNum =Math.floor(Math.random() * 1000000)
+  postNum = postNum.toString();
+     
     const task = document.getElementById("taskIn").value
     const elementToAdd = ` <div class="post1 postNum${postNum} " >
     <div id="taskContainer" class="taskContainer">
-        <h3 onclick="editTask()" class="textNum${postNum}" id="text">${task}</h3>
+        <h3 onclick="editTask(${postNum})"  class="textNum${postNum}" id="text">${task}</h3>
     </div>
       <div>
       <button>
@@ -23,17 +25,39 @@ if(task != ""){
 
   Con.insertAdjacentHTML("beforeend", elementToAdd)
 }
+console.log(postNum)
 }
 const  deleteTask = (x) => {
   
- let elementToDelete = document.querySelector(`.postNum${postNum}`)	;
+ let elementToDelete = document.querySelector(`.postNum${x}`)	;
  elementToDelete.remove();
+ 
 
 }
 // to do add input to edit the text of h3 and save it 
 
-let editTask = () => {
-  let elementToEdit = document.querySelector(`.textNum${postNum}`)	;
+// let elementToEdit = document.querySelector(`.textNum${x}`)	;
+// console.log(elementToEdit)
+// elementToEdit.addEventListener('click', () => {
+//   let input = document.createElement('input');
+  
+//   input.type = 'text';
+//   input.classList.add('taskIn');
+//   input.value = elementToEdit.innerHTML;
+  
+//   input.id = 'taskIn';
+//   input.name = 'inputToEdit';
+//   elementToEdit.innerHTML = '';
+//   elementToEdit.appendChild(input);
+//   input.focus();
+
+
+//   if (input.value == '') {
+//     deleteTask(x+'toEdit');
+//   }
+// });
+let editTask = (x) => {
+  let elementToEdit = document.querySelector(`.textNum${x}`)	;
   
   let input = document.createElement('input');
   
@@ -47,16 +71,20 @@ let editTask = () => {
   elementToEdit.appendChild(input);
   
   input.focus();
-  input.addEventListener('blur', () => {
+  input.addEventListener('click', () => {
     elementToEdit.innerHTML = input.value;
     if (input.value == '') {
-      deleteTask(postNum);
+      deleteTask(x);
+      input.onblur = () => {
+        input.remove();
+      }
+    
     }
   });
 }
 // to do a button to make as done
-const markAsDone = () => {
-  let elementToMarkAsDone = document.querySelector(`.textNum${postNum}`)	;
+const markAsDone = (x) => {
+  let elementToMarkAsDone = document.querySelector(`.textNum${x}`)	;
   elementToMarkAsDone.classList.add('done');
 }
 //
