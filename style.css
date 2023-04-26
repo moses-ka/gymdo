@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+ header{
+    display: flex;
+    justify-content :center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 6rem;
+    
+ }
+  
+.posts {
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+   
+    
+}
+.formContainer{
+    width:600px;
+    height: 200px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.post1 {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    height: 56px;
+    
+}
+.taskContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    border: solid #000000 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-radius: 1px;
+}
+/* .taskContainer:hover{
+    width: 300px;
+} */
+.taskIn{
+    width: 500px;
+    height : 50px;
+    border: solid #000000 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-radius: 1px;
+}
+.button,.buttonEdi, .buttonEdit{
+    
+    height: 54px;
+    width: 150px;
+    font-family: Koulen; 
+        font-weight: 0;
+        font-size: 18px;
+        color: #000000;
+        background-color: #ffffff;
+        padding: 5px 50px;
+        border: solid #000000 2px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        border-radius: 1px;
+        transition : 500ms;
+        transform: translateY(0);
+        text-transform: uppercase;
+}
+.button:hover,.buttonDelet:hover,.buttonEdit:hover{
+    
+    transition : 500ms; 
+    padding: 10px 44px; 
+    /* transform : translateY(-0px); */
+    background-color: #000000;
+    color: #ffffff;
+    border: solid 1px #ffffff;
+    }
+.buttonDelet, .buttonEdit{
+    height: 54px;
+    width: 150px;
+    font-family: Koulen; 
+    font-weight: 0;
+    font-size: 18px;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 5px 50px;
+    border: solid #000000 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    border-radius: 1px;
+    transition : 500ms;
+    transform: translateY(0);
+    text-transform: uppercase;
+    /* display: none !important; */
+}
+h3{
+    font-family: Koulen; 
+   
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+}
+.done{
+   text-decoration: line-through;
+   font-weight: lighter;
+    
+}
+.img{
+   margin: 10px;
+}
+.img:hover {
+    transform: scale(1.1);
+    transition: 300ms;
+
+}
+
