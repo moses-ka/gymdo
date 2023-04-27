@@ -31,36 +31,15 @@ const  deleteTask = (x) => {
   
  let elementToDelete = document.querySelector(`.postNum${x}`)	;
  elementToDelete.remove();
- 
 
 }
-// to do add input to edit the text of h3 and save it 
 
-// let elementToEdit = document.querySelector(`.textNum${x}`)	;
-// console.log(elementToEdit)
-// elementToEdit.addEventListener('click', () => {
-//   let input = document.createElement('input');
-  
-//   input.type = 'text';
-//   input.classList.add('taskIn');
-//   input.value = elementToEdit.innerHTML;
-  
-//   input.id = 'taskIn';
-//   input.name = 'inputToEdit';
-//   elementToEdit.innerHTML = '';
-//   elementToEdit.appendChild(input);
-//   input.focus();
-
-
-//   if (input.value == '') {
-//     deleteTask(x+'toEdit');
-//   }
-// });
 let editTask = (x) => {
   let elementToEdit = document.querySelector(`.textNum${x}`)	;
   let anyWhere = document.querySelector('body')	;
   let input = document.createElement('input');
-  let button = document.querySelector('.img');
+  
+  
   input.type = 'text';
   input.classList.add('taskIn');
   input.value = elementToEdit.innerHTML;
@@ -68,27 +47,29 @@ let editTask = (x) => {
   input.name = 'inputToEdit';
   elementToEdit.innerHTML = '';
   elementToEdit.appendChild(input);
-  
+ 
   input.focus();
   input.addEventListener('click', () => {
+    
     elementToEdit.innerHTML = input.value;
     if (input.value == '') {deleteTask(x);}
     })
-    input.focus();
-    button.addEventListener("dblclick", () => {
+    input.addEventListener('keypress',(e) => {
+      if(e.key === 'enter')
+      
+      input.style.display = 'none'
       elementToEdit.innerHTML = input.value;
-      if (input.value == ''){deleteTask( x);}; 
+      if (input.value == ''){deleteTask( x);};
     }
-    )
-    ;
-
-      
-      
-}
+    );
+    };
   
 // to do a button to make as done
 
 const markAsDone = (x) => {
   let elementToMarkAsDone = document.querySelector(`.textNum${x}`)	;
   elementToMarkAsDone.classList.toggle('done');
+
+  console.log(elementToMarkAsDone)
+  
 }
