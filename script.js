@@ -55,11 +55,13 @@ let editTask = (x) => {
     if (input.value == '') {deleteTask(x);}
     })
     input.addEventListener('keypress',(e) => {
-      if(e.key === 'enter')
+      if(e.key === 'Enter' || e.key === 'enter'){
+
+        input.style.display = 'none'
+        elementToEdit.innerHTML = input.value;
+        if (input.value == ''){deleteTask( x);};
+      }
       
-      input.style.display = 'none'
-      elementToEdit.innerHTML = input.value;
-      if (input.value == ''){deleteTask( x);};
     }
     );
     };
