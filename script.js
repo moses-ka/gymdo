@@ -1,7 +1,15 @@
 const Con = document.querySelector(".posts");
+ (dataNum) => {
+  let restor = localStorage.getItem(`${dataNum}`)
+let container = document.querySelector('.formContainer')
+container.insertAdjacentHTML("beforeend",restor)
+}
 
 
+//console.log(container)
 
+
+//console.log(restor_)
 const addTask = () => {
   let postNum =Math.floor(Math.random() * 1000000)
   postNum = postNum.toString();
@@ -25,7 +33,14 @@ if(task != ""){
 
   Con.insertAdjacentHTML("beforeend", elementToAdd)
 }
-console.log(postNum)
+let dataNum =Math.floor(Math.random() * 1000000)
+  dataNum =dataNum.toString();
+(dataNum)=> {
+  localStorage.setItem(`${dataNum}`,elementToAdd)
+  console.log(da)
+}
+
+
 }
 const  deleteTask = (x) => {
   
