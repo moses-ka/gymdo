@@ -41,8 +41,8 @@ let storeData = () => {
   localStorage.setItem(`${dataNum}`,elementToAdd)
   console.log(dataNum)
 }
-storeData(dataNum)
 }
+storeData(dataNum)
 
 const  deleteTask = (x) => {
   
