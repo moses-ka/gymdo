@@ -1,9 +1,9 @@
 const Con = document.querySelector(".posts");
- let restorData = () => {
+ let restorData = (dataNum) => {
   let restor = localStorage.getItem(`${dataNum}`)
 let container = document.querySelector('.formContainer')
 container.insertAdjacentHTML("beforeend",restor)
-console.log(dataNum +'dataTo restor!!')
+console.log(`${dataNum}` +'dataTo restor!!')
 }
 
 restorData()
@@ -40,8 +40,9 @@ let storeData = () => {
   dataNum = dataNum.toString();
   localStorage.setItem(`${dataNum}`,elementToAdd)
   console.log(dataNum)
+  restorData(dataNum)
 }
-storeData(dataNum)
+storeData()
 }
 
 const  deleteTask = (x) => {
