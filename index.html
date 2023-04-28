@@ -10,17 +10,19 @@
 </head>
 <body class="body">
    <header>
-       <h1>Gymdo</h1>
-       <h2>Add a exercise</h2>
+       <h2>Gymdo</h2>
+       <h3>Add an Exercise</h3>
    </header>
+   <div class="toAddTask">
+
+       <input id="taskIn"  class="taskIn" value=""  placeholder=" TASK" type="text" onchange="">  
+       <button class="button" id="addBtn" onclick="addTask()" >Add</button>
+       
+   </div>
     <div  class="posts">
-        <div class="formContainer">
-             
-           <input id="taskIn"  class="taskIn" value=""  placeholder=" TASK" type="text" onchange="">  
-           <button class="button" id="addBtn" onclick="addTask()" >Add</button>
-           
         
-        <!-- </div>
+     <!-- <div class="formContainer">
+         </div>
         <div id="1" class="post1">
             <div id="taskContainer" class="taskContainer">
                 <h3  class="postNum${postNum}" id="text">going to the gym</h3>
@@ -29,11 +31,12 @@
                 <button name="delete" onclick="deleteTask(event)" >
                     <img class="img" width="30px" src="assets/delete.png" alt="">
                 </button>
-                <!-- <button onclick="editTask()">
+                <button onclick="editTask()">
                     <img class="img" width="30px" src="assets/edit.png" alt=""> 
-                </button> -->
-              </div>
-        </div> 
+                </button>
+     </div>
+     
+        </div> -->
         
     </div>
     <script src="script.js"></script>
