@@ -68,7 +68,7 @@ let editTask = (x) => {
   let input = document.createElement('input');
 
   input.type = 'text';
-  input.classList.add('taskIn');
+  input.classList.add('taskIn','tempInput');
   input.value = elementToEdit.innerHTML;
   input.id = 'taskIn';
   input.name = 'inputToEdit';

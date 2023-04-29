@@ -56,6 +56,15 @@
     align-items: center;
     justify-content: center;
 }
+.hr{
+    
+    width: 280px;
+    height: 0.7px;
+    background-color: black;
+
+    
+
+}
 
 .post1 {
     display: flex;
@@ -80,32 +89,48 @@
     width: 300px;
 } */
 .taskIn{
-    width: 600px;
+    width: 606px;
     height : 50px;
     border: solid #000000 2px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
     border-radius: 1px;
+    padding-left: 10px;
+}
+.tempInput{
+    width: 500px;
 }
 @media screen and (max-width:600px) {
     .taskIn{
-       width:300px;
+       width:312px;
        transition : 500ms;
-
+       
+}
+    .tempInput{
+    width: 204px !important;
+    transition : 500ms;
 }
 .button{
     width: 70px !important;
     height: 40px !important;
     font-size: 12px !important;
+    margin-right: 2px!important;
 }
 }
  @media screen and (max-width: 600px) {
      .taskContainer{
         width: 200px;
-        height: 46px;
+        height: 44px;
         padding: 5px 5px !important;
         transition : 500ms;
 }
+    .hr{
+    
+        width:120px;
+        transition : 500ms;
+    }
+    
 }
+
 .button,.buttonEdi, .buttonEdit{
     
     height: 54px;
@@ -126,7 +151,7 @@
 .button:hover,.buttonDelet:hover,.buttonEdit:hover{
     
     transition : 500ms; 
-    padding: 10px 44px; 
+    padding: 10px ; 
     /* transform : translateY(-0px); */
     background-color: #000000;
     color: #ffffff;
@@ -166,10 +191,10 @@ h3{
 }
 @media screen and (max-width: 600px) {
     .img{
-       width: 22px !important;
+       width: 28px !important;
        transition : 500ms;
-      
 }
+   
 }
 .buttons{
     display: flex;
